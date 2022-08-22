@@ -1,0 +1,48 @@
+* {
+  transition: 0.5s;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: darkgrey;
+}
+
+.box {
+  width: 0;
+  overflow: hidden;
+}
+input:checked ~ .box {
+  background-color: aqua;
+  width: 125px;
+}
+input:checked ~ .icon {
+  left: 100px;
+
+  transform: rotateY(180deg);
+}
+input:checked ~ .fa-solid {
+  transform: rotateX(180deg);
+}
+input:checked {
+  left: 90px;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  left: 0px;
+  top: 15px;
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+}
+.icon {
+  position: absolute;
+  left: 0px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+}
